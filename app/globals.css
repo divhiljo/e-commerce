@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Savane Dorée Palette */
+  --savane-50: #FFF8E7;
+  --savane-100: #FDE68A;
+  --savane-200: #FCD34D;
+  --savane-400: #D97706;
+  --savane-600: #92400E;
+  --savane-800: #1C0A00;
+
+  --card-bg: #FFFDF5;
+  --ivoire: #FFF8E7;
+  --amber-mid: #D97706;
+  --amber-light: #FDE68A;
+
+  --text-dark: #1C0A00;
+  --text-mid: #6B4C2A;
+  --text-light: #9A7B5A;
+
+  --red: #EF4444;
+
+  /* Map to shadcn tokens */
+  --background: var(--savane-50);
+  --foreground: var(--text-dark);
+  --card: var(--card-bg);
+  --card-foreground: var(--text-dark);
+  --popover: #FFFFFF;
+  --popover-foreground: var(--text-dark);
+  --primary: var(--savane-600);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--savane-100);
+  --secondary-foreground: var(--savane-800);
+  --muted: var(--ivoire);
+  --muted-foreground: var(--text-mid);
+  --accent: var(--savane-400);
+  --accent-foreground: #FFFFFF;
+  --destructive: var(--red);
+  --destructive-foreground: #FFFFFF;
+  --border: var(--savane-200);
+  --input: var(--savane-200);
+  --ring: var(--savane-400);
+  --radius: 0.625rem;
+
+  --chart-1: var(--savane-600);
+  --chart-2: var(--savane-400);
+  --chart-3: var(--savane-200);
+  --chart-4: var(--savane-100);
+  --chart-5: var(--savane-50);
+
+  --sidebar: var(--card-bg);
+  --sidebar-foreground: var(--text-dark);
+  --sidebar-primary: var(--savane-600);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: var(--ivoire);
+  --sidebar-accent-foreground: var(--text-dark);
+  --sidebar-border: var(--savane-200);
+  --sidebar-ring: var(--savane-400);
+}
+
+@theme inline {
+  --font-sans: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif;
+  --font-serif: var(--font-playfair), 'Playfair Display', serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Custom Savane colors for direct use */
+  --color-savane-50: var(--savane-50);
+  --color-savane-100: var(--savane-100);
+  --color-savane-200: var(--savane-200);
+  --color-savane-400: var(--savane-400);
+  --color-savane-600: var(--savane-600);
+  --color-savane-800: var(--savane-800);
+  --color-card-bg: var(--card-bg);
+  --color-ivoire: var(--ivoire);
+  --color-amber-mid: var(--amber-mid);
+  --color-amber-light: var(--amber-light);
+  --color-text-dark: var(--text-dark);
+  --color-text-mid: var(--text-mid);
+  --color-text-light: var(--text-light);
+  --color-red: var(--red);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
